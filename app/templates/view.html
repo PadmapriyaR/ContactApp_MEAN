@@ -1,0 +1,69 @@
+<header>
+<div class="w3-container w3-indigo">
+  <center><h3>Welcome To Contact Application</h3></center>
+</div>
+<br>
+<div>
+  <center><a class="w3-button w3-pink" href="#/">Create Contact</a>
+  &nbsp;
+  <a class="w3-button w3-pink" href="#/view">View Contacts</a></center>
+</div>
+</header>
+<br><br>
+<div class="container" style="width:100%">
+	<div style="float:left; width=50%; margin-left:10px;">
+	<center>
+		<div class="w3-card-12">
+  			<header class="w3-container">
+        		<h1>View Contacts</h1>
+    		</header>
+  		<div class="w3-container w3-center"><br>
+    		<div>
+    			<table class="w3-table w3-bordered w3-striped w3-card-4">
+    				<tr>
+    					<th>Contact Name</th>
+    					<th>Email ID</th>
+    					<th>Mobile</th>
+    					<th>Action</th>
+    				</tr>
+            <tr ng-repeat="contact in contacts">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.mobile }}</td>
+    			<td><button class="w3-btn w3-white w3-border w3-border-red w3-round" ng-click="editContact(contact._id)">Edit</button></td>
+    		</tr>	
+    	</table>	
+    	
+    	</div>
+    	<br>
+    <br>	
+  </div>
+</div>
+</center><br><br>
+	</div>
+	<div style="float:left; width:50%; margin-left:70px;">
+		<div class="w3-container w3-center">
+  			<center><div class="w3-card-4">
+    <div class="w3-container">
+      <h2>Update Contact</h2>
+    </div>
+	<form class="w3-container">
+      <p>
+      <input class="w3-input" type="text" ng-model="contact.name" placeholder="Your Name" required><br>
+      <p>     
+      <input class="w3-input" type="email" ng-model="contact.email" placeholder="Your Email ID" required><br>
+      <p>     
+      <input class="w3-input" type="text" ng-model="contact.mobile" placeholder="Your Mobile Number" required><br>
+      <p>     
+      <input class="w3-input" type="text" ng-model="contact.work" placeholder="Your Work Contact Number" required><br><br>
+      <div>
+  		<center><a class="w3-button w3-pink" href="#/view" ng-click="updateContact()">Update Contact</a>
+  		&nbsp;
+  		<a class="w3-button w3-pink" href="#/view" ng-click="deleteContact(contact._id)">Delete Contacts</a></center><br><br>
+		</div>
+    </form>
+  </div>
+</center>
+</div>
+	</div>
+</div>

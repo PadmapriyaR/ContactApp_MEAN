@@ -1,0 +1,34 @@
+<div ng-submit="createContact()">
+<header>
+<div class="w3-container w3-indigo">
+  <center><h3>Welcome To Contact Application</h3></center>
+</div>
+<br>
+<div>
+  <center><a class="w3-button w3-pink" href="#/">Create Contact</a>
+  &nbsp;
+  <a class="w3-button w3-pink" href="#/view">View Contacts</a></center>
+</div>
+</header>
+<br><br>
+<div class="w3-container w3-center">
+  <center><div class="w3-card-4">
+    <div class="w3-container">
+      <h2>Create Contact</h2>
+    </div>
+
+    <form class="w3-container">
+      <p>
+      <input class="w3-input" type="text" ng-model="contact.name" placeholder="Enter Your Name" required><br>
+      <p>     
+      <input class="w3-input" type="email" ng-model="contact.email" placeholder="Enter Your Email ID" required><br>
+      <p>     
+      <input class="w3-input" type="number" string-to-number ng-model="contact.mobile" placeholder="Enter Your Mobile Number" required><br>
+      <p>     
+      <input class="w3-input" type="number" ng-model="contact.work" placeholder="Enter Your Work Contact Number" required><br><br>
+      <input type="submit" value="Create" class="w3-button w3-pink"></a><br><br>
+    </form>
+  </div>
+</center>
+</div>
+</div>
